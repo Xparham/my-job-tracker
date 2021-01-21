@@ -3,7 +3,7 @@ const jobType = document.querySelector("#job-type");
 const resultsSection = document.querySelector("#results");
 const searchForm = document.querySelector("#search-form");
 
-const url = 'http://api.adzuna.com/v1/api/jobs/us/search/1?app_id=19d80290&app_key=4b2076ceb89c4ffbcf6b0e543402fa9f&results_per_page=10&what=javascript%20developer&content-type=application/json'
+
 
 let sampleData = {
     // "salary_min": 50000,
@@ -57,7 +57,10 @@ searchForm.addEventListener("submit", function(e){
 
 });
 
-function searchJobs(jobString) {
+function searchJobs(jobString, jobsReturned, country = 'us') {
+
+    const url = `http://api.adzuna.com/v1/api/jobs/us/search/1?app_id=19d80290&app_key=4b2076ceb89c4ffbcf6b0e543402fa9f&results_per_page=10&what=javascript%20developer&content-type=application/json`;
+
     jobs.push({
         "salary_min": 50000,
         "longitude": -0.776902,
