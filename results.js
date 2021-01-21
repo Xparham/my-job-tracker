@@ -17,7 +17,7 @@ let sampleData = {
       "display_name": "Marlow, Buckinghamshire"
     },
     "salary_is_predicted": 0,
-    "description": "JavaScript Developer Corporate ...",
+    "description": "JavaScript Developer Corporate lorfdfgdgrtgrtgrgbgbdfgbgnbjkrkbntrkjhbwhtgwltrblwutigh",
     "__CLASS__": "Adzuna::API::Response::Job",
     "created": "2013-11-08T18:07:39Z",
     "latitude": 51.571999,
@@ -49,10 +49,11 @@ searchForm.addEventListener("submit", function(e){
         console.log(job.title)
         console.log(job.description)
 
-        const div =document.createElement('div')
-        div.innerHTML=`<h4>${}</h4>  <p>${}</p>`
+        const div =document.createElement('div');
+        div.innerHTML=`<h4>${job.title}</h4>  <p>${job.description}</p>`;
+        resultsSection.appendChild(div)
 
-    })
+    });
 
 
 
