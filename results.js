@@ -57,9 +57,9 @@ searchForm.addEventListener("submit", function(e){
 
 });
 
-function searchJobs(jobString, jobsReturned, country = 'us') {
+function searchJobs(jobString, jobsCount, country = 'us') {
 
-    const url = `http://api.adzuna.com/v1/api/jobs/us/search/1?app_id=19d80290&app_key=4b2076ceb89c4ffbcf6b0e543402fa9f&results_per_page=10&what=javascript%20developer&content-type=application/json`;
+    const url = `http://api.adzuna.com/v1/api/jobs/${country}/search/1?app_id=19d80290&app_key=4b2076ceb89c4ffbcf6b0e543402fa9f&results_per_page=${jobsCount}&what=${jobString}&content-type=application/json`;
 
     jobs.push({
         "salary_min": 50000,
