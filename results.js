@@ -49,6 +49,9 @@ searchForm.addEventListener("submit", function(e){
         console.log(job.title)
         console.log(job.description)
 
+        const div =document.createElement('div')
+        div.innerHTML=`<h4>${}</h4>  <p>${}</p>`
+
     })
 
 
