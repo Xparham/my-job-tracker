@@ -50,7 +50,7 @@ searchForm.addEventListener("submit", function(e){
         console.log(job.description)
 
         const div =document.createElement('div');
-        div.innerHTML=`<h4>${job.title}</h4>  <p>${job.description}</p>`;
+        div.innerHTML=`<h4 class="p-6 mx-6">${job.title}</h4>  <p class="p-6 mx-6">${job.description}</p>`;
         resultsSection.appendChild(div)
 
     });
