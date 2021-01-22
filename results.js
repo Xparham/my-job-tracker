@@ -3,6 +3,7 @@ const jobType = document.querySelector("#job-type");
 const resultsSection = document.querySelector("#results");
 const searchForm = document.querySelector("#search-form");
 
+const SEARCH_COUNTRY = 'us'
 
 
 let sampleData = {
@@ -45,7 +46,7 @@ searchForm.addEventListener("submit", function(e){
    
     const jobResults = searchJobs(jobType.value);
 
-    // resultsSection.innerHTML = '<div id="results"></div>'
+    resultsSection.innerHTML = '<div id="results"></div>';
 
     // jobs.forEach(function (job){
 
@@ -53,22 +54,29 @@ searchForm.addEventListener("submit", function(e){
     //     div.innerHTML=`<h4 class="p-6 mx-6 font-bold text-3xl">${job.title}</h4>  <p class="p-6 mx-6">${job.description}</p>`;
     //     resultsSection.appendChild(div)
 
-        jobResults.forEach(function(job){
-            const div = document.createElement('div'); 
-            div.innerHTML=`
-            <h4 class="p-6 mx-6 font-bold text-3xl"><a href=${job.redirect_url}>${job.title}</a></h4>
-            <h5>${job.salary_min} - ${job.salary_max}</h5>
-            <h6>${job.location.display_name} - ${job.contract_time}</h6>
-            <p class="p-6 mx-6">${job.description}</p>`;
+    jobResults.forEach(function (job) {
+         const div = document.createElement('div'); 
+         div.innerHTML=`
+        <h4 class="p-6 mx-6 font-bold text-3xl"><a href=${job.redirect_url}>${job.title}</a></h4>
+        <h5>${job.salary_min} - ${job.salary_max}</h5>
+        <h6>${job.location.display_name} - ${job.contract_time}</h6>
+        <p class="p-6 mx-6">${job.description}</p>`;
             
-            resultsSection.appendChild(div);
-        })
-
-    
+        resultsSection.appendChild(div);
+        console.log(div)
+    });
 
 });
 
-async function searchJobs(jobString, jobsCount = 10, country = 'us') {
+// let alljobs = searchJobs("job I need")
+
+// let  justAbove40k = alljobs.filter(function(job){
+//     (job.salary_min >= 40000)
+// })
+
+// justAbove40k.forEach(`fn`)
+
+async function searchJobs(jobString, jobsCount = 10, country = SEARCH_COUNTRY) {
 
     const url = `http://api.adzuna.com/v1/api/jobs/${country}/search/1?app_id=19d80290&app_key=4b2076ceb89c4ffbcf6b0e543402fa9f&results_per_page=${jobsCount}&what=${jobString}&content-type=application/json`;
 
