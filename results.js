@@ -6,7 +6,7 @@ const searchForm = document.querySelector("#search-form");
 const SEARCH_COUNTRY = 'us'
 
 
-let sampleData = {
+// let sampleData = {
     // "salary_min": 50000,
     // "longitude": -0.776902,
     // "location": {
@@ -39,9 +39,9 @@ let sampleData = {
     // },
 };
 
-let jobs = []
+// let jobs = []
 
-searchForm.addEventListener("submit", function(e){
+searchForm.addEventListener("submit", async function(e){
     e.preventDefault();
    
     const jobResults = searchJobs(jobType.value);
