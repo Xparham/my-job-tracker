@@ -6,16 +6,67 @@
     <title>Document</title>
     <link rel="stylesheet" href="dist/tailwind.css">
 </head>
-<body class="h-screen" style="background-image:url('img/landing-page.jpg'); background-repeat: no-repeat; background-size: cover;">
 
-    <div class="px-6 py-6 text-white" >
-       <h1 class="text-4xl">PlaceHolder</h1>
-
-       <p class="">The space for the most relevant jobs in Web Development. Delivered to you at once</p>
-        <div class="my-96">
-            <p>Already a member? <a href="" >Log in</a></p>
-            <p>If not <a href="">Register Today</a></p>
+<body> 
+    <form id="login-modal">
+        <div class="flex justify-center items-center bg-black fixed top-0 left-0 right-0 bottom-0 opacity-90 ">
+    
+            
+            <div class="bg-white rounded shadow-lg p-6 w-1/6">
+                <h2 class="text-center border-b border-gray-300">Please Enter Credentials</h2>
+                <span class="far fa-times-circle cursor-pointer" id="close-modal"></span>
+                
+                <div class="my-4">
+                    <label for="name">Username:</label>
+                    <input type="text" id="u-entry" name="u-entry" placeholder="Enter your username" class="w-full bg-gray-200 rounded-md p-1">
+                
+                    <div>
+                        <!-- whatever we want --> 
+                </div>
+                        <!--<small class="hidden">Please enter your name</small>-->
+                
+                </div>
+                
+                <div class="my-4">
+                    <label for="email">Password:</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your password" class="w-full bg-gray-200 rounded-md p-1">
+    
+                    <div>
+                        <!-- whatever we want --> 
+                </div>
+                        <!--<small class="hidden">Invalid email</small>-->
+                </div>
+    
+                <div class="my-4 pb-6">
+                    <label for="subject">Confirm Password:</label>
+                    <input type="text" id="subject" name="subject" placeholder="Please Confirm Password" class="w-full bg-gray-200 rounded-md p-1">
+                
+                    <div>
+                        <!-- whatever we want --> 
+                </div>
+                        <!--<small class="hidden">Please enter subject</small>-->
+    
+                </div>
+    
+                
+    
+    
+                <button class=" flex justify-center bg-black rounded text-white p-2 shadow-lg">Log-in</button>
+            
+            </div>  
+    
+    
         </div>
+    </form>
+
+    <div class="h-screen" style="background-image:url('img/landing-page.jpg'); background-repeat: no-repeat; background-size: cover;">
+        <h1 class="text-4xl ">PlaceHolder</h1>
+
+        <p class="">The space for the most relevant jobs in Web Development. Delivered to you at once</p>
+            <div class="my-96">
+                <p>Already a member? <a href="" >Log in</a></p>
+                <p>If not <a href="">Register Today</a></p>
+            </div>
     </div>
 
     <div id="register-modal">
@@ -23,10 +74,10 @@
 
     </div>
 
-    <div id="login-modal">
 
         
-    </div>
+        
+
 
 
 
