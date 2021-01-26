@@ -37,14 +37,18 @@ const SEARCH_COUNTRY = 'us'
     //   "__CLASS__": "Adzuna::API::Response::Company",
     //   "display_name": "Corporate Project Solutions"
     // },
-};
+// };
 
 // let jobs = []
 
-searchForm.addEventListener("submit", async function(e){
+searchForm.addEventListener('submit', async function(e){
     e.preventDefault();
    
-    const jobResults = searchJobs(jobType.value);
+    const jobName = jobType.value
+    let jobResults = await searchJobs(jobName)
+    
+    let jobs = jobResults.results
+    let jobsFound = jobResults.count 
 
     resultsSection.innerHTML = '<div id="results"></div>';
 
@@ -54,16 +58,15 @@ searchForm.addEventListener("submit", async function(e){
     //     div.innerHTML=`<h4 class="p-6 mx-6 font-bold text-3xl">${job.title}</h4>  <p class="p-6 mx-6">${job.description}</p>`;
     //     resultsSection.appendChild(div)
 
-    jobResults.forEach(function (job) {
+    jobs.forEach(function (job) {
          const div = document.createElement('div'); 
          div.innerHTML=`
-        <h4 class="p-6 mx-6 font-bold text-3xl"><a href=${job.redirect_url}>${job.title}</a></h4>
-        <h5>${job.salary_min} - ${job.salary_max}</h5>
-        <h6>${job.location.display_name} - ${job.contract_time}</h6>
-        <p class="p-6 mx-6">${job.description}</p>`;
+            <h4 class="p-6 mx-6 font-bold text-3xl border-b-2 cursor-pointer hover:text-blue-200"><a href=${job.redirect_url}>${job.title}</a></h4>
+            <h5 class="p-6 mx-6>${job.salary_min} - ${job.salary_max}</h5>
+            <h6 class="p-6 mx-6>${job.location.display_name} - ${job.contract_time}</h6>
+            <p class="p-6 mx-6">${job.description}</p>`;
             
         resultsSection.appendChild(div);
-        console.log(div)
     });
 
 });
