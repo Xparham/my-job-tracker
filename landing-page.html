@@ -8,8 +8,8 @@
 </head>
 
 <body> 
-    <form id="login-modal">
-        <div class="flex justify-center items-center bg-black fixed top-0 left-0 right-0 bottom-0 opacity-90 hidden">
+    <form class="hidden" id="login-modal">
+        <div class="flex justify-center items-center bg-black fixed top-0 left-0 right-0 bottom-0 opacity-90">
     
             
             <div class="bg-white rounded shadow-lg p-6 w-1/6">
@@ -61,8 +61,8 @@
         </div>
     </form>
 
-    <form id="Register-modal">
-        <div class="flex justify-center items-center bg-black fixed top-0 left-0 right-0 bottom-0 opacity-90 hidden">
+    <form class="hidden" id="register-modal">
+        <div class="flex justify-center items-center bg-black fixed top-0 left-0 right-0 bottom-0 opacity-90">
     
             
             <div class="bg-white rounded shadow-lg p-6 w-1/4">
@@ -133,14 +133,15 @@
     
     
         </div>
+    </form>
 
     <div class="h-screen" style="background-image:url('img/landing-page.jpg'); background-repeat: no-repeat; background-size: cover;">
         <h1 class="text-4xl px-6 py-6 text-white">PlaceHolder</h1>
 
         <p class="px-6 py-6 text-white">The space for the most relevant jobs in Web Development. Delivered to you at once.</p>
             <div class="my-96 px-6 py-6 text-white">
-                <p>Already a member? <button class="underline">Log in</button></p>
-                <p>If not <button class="underline">Register Today</button></p>
+                <p>Already a member? <button id="login" class="underline">Log in</button></p>
+                <p>If not <button id="register" class="underline">Register Today</button></p>
             </div>
     </div>
 
@@ -159,6 +160,29 @@
 
 
 
-    <script src="landing-page.js"></script>  
+    <script src="landing-page.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyDsdf1xFr8suzQlrGZt140Zg6UxDQUsbbE",
+    authDomain: "my-job-tracker-7a838.firebaseapp.com",
+    projectId: "my-job-tracker-7a838",
+    storageBucket: "my-job-tracker-7a838.appspot.com",
+    messagingSenderId: "234347829852",
+    appId: "1:234347829852:web:1f9ced332efab1a1d02499",
+    measurementId: "G-PMX2NECT6X"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>  
 </body>
 </html>
