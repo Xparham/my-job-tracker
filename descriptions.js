@@ -1,3 +1,3 @@
-async function getSingleJob(jobId){
+const id = new URLSearchParams()
 
-}
+
