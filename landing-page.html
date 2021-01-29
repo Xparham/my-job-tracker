@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+    
+    
+    <script src="firebase-init.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+
     <link rel="stylesheet" href="dist/tailwind.css">
 </head>
 
@@ -39,22 +48,12 @@
                 </div>
                         <!--<small class="hidden">Invalid email</small>-->
                 </div>
-    
-                <div class="my-4 pb-6">
-                    <label for="subject">Confirm Password:</label>
-                    <input type="text" id="confirm_password" name="subject" placeholder="Please Confirm Password" class="w-full bg-gray-200 rounded-md p-1">
-                
-                    <div>
-                        <!-- whatever we want --> 
-                </div>
-                        <!--<small class="hidden">Please enter subject</small>-->
-    
-                </div>
+
     
                 
     
     
-                <button class= "flex justify-center bg-black rounded text-white p-2 shadow-lg" onclick= "login()">Log-in</button>
+                <button class= "flex justify-center bg-black rounded text-white p-2 shadow-lg">Log-in</button>
              
             </div>  
     
@@ -150,40 +149,6 @@
     
 
 
-        
-        
-
-
-
-
-
-
-
-
-    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyDsdf1xFr8suzQlrGZt140Zg6UxDQUsbbE",
-    authDomain: "my-job-tracker-7a838.firebaseapp.com",
-    projectId: "my-job-tracker-7a838",
-    storageBucket: "my-job-tracker-7a838.appspot.com",
-    messagingSenderId: "234347829852",
-    appId: "1:234347829852:web:1f9ced332efab1a1d02499",
-    measurementId: "G-PMX2NECT6X"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
 <script src="landing-page.js"></script>  
 </body>
 </html>
