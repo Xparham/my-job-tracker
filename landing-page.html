@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
     <link rel="stylesheet" href="dist/tailwind.css">
 </head>
 
@@ -19,8 +20,8 @@
                 </div>
                     <img class="rounded-full w-48 h-48 mx-10 my-4" src="img/avatar.jpg" alt="">
                 <div class="my-4">
-                    <label for="name">Username:</label>
-                    <input type="text" id="u-entry" name="u-entry" placeholder="Enter your username" class="w-full bg-gray-200 rounded-md p-1">
+                    <label for="name">Username or Email:</label>
+                    <input type="text" id="email" name="u-entry" placeholder="Enter your username" class="w-full bg-gray-200 rounded-md p-1">
                 
                     <div>
                         <!-- whatever we want --> 
@@ -135,12 +136,13 @@
         </div>
     </form>
 
-    <div class="h-screen" style="background-image:url('img/landing-page.jpg'); background-repeat: no-repeat; background-size: cover;">
-        <h1 class="text-4xl px-6 py-6 text-white">PlaceHolder</h1>
+    <div class="h-screen" style="background-image:url('img/landing-page2.png'); background-repeat: no-repeat; background-size: cover;">
+        <span class="fas fa-atlas"></span>
+        <h1 class="text-6xl px-6 py-6 font-bold text-white">Gradus</h1>
 
-        <p class="px-6 py-6 text-white">The space for the most relevant jobs in Web Development. Delivered to you at once.</p>
-            <div class="my-96 px-6 py-6 text-white">
-                <p>Already a member? <button id="login" class="underline">Log in</button></p>
+        <p class="px-6 py-6 text-xl text-white">The space for the most relevant jobs in Web Development. Delivered to you at once.</p>
+            <div class="my-96 pt-32 text-xl px-6 py-6 text-white">
+                <p class="pb-4">Already a member? <button id="login" class="underline">Log in</button></p>
                 <p>If not <button id="register" class="underline">Register Today</button></p>
             </div>
     </div>
@@ -158,7 +160,7 @@
 
 
 
-
+    <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-auth.js"></script>
 <!-- The core Firebase JS SDK is always required and must be listed first -->
 <script src="https://www.gstatic.com/firebasejs/8.2.4/firebase-app.js"></script>
 
